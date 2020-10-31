@@ -18,7 +18,6 @@ Module.register("MMM-SG-Transport-V2", {
         // Intervals
         refresh_interval: 60 * 1000, // refresh display every minute
 
-        // TODO: Move config into separate file
         // TODO: Add specific bus number as a filter (optional)
         // Bus Stop IDs and Names to show
         bus_stops: [{
