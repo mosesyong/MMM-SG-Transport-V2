@@ -1,3 +1,4 @@
+
 # MMM-SG-Transport-V2
 MagicMirror² Module - Local Transport in Singapore
 
@@ -51,14 +52,37 @@ Sample configuration entry for your `~/MagicMirror/config/config.js`:
             ]
         }
     },
+<table>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>lta_api_key</code></td>
+      <td><strong>REQUIRED</strong> API Key from LTA DataMall<br><br><strong>Type:</strong> <code>string</code></td>
+      </tr>
+      <td><code>BusStopCode </code></td>
+      <td><strong>REQUIRED</strong> Bus stop number<br><br><strong>Type:</strong> <code>integer</code></td>
+      </tr>
+      <tr>
+      <td><code>name </code></td>
+      <td><strong>REQUIRED</strong> Custom bus stop name for display<br><br><strong>Type:</strong> <code>string</code></td>
+      </tr>
+      <tr>
+      <td><code>BusNumbers </code></td>
+      <td><strong>OPTIONAL</strong>  Optional array of integers containing bus numbers you wish to display. Invalid bus numbers will be ignored.
+<br><br><strong>Type:</strong> <code>Array[integer]</code></td>
+      </tr>
+  </tbody>
+</table>
 
-- BusStopCode - Bus stop number.
-- name - Custom name to display that represents the bus stop in the UI.
-- BusNumbers - Optional array of string containing bus numbers you wish to display. Invalid bus numbers will not be displayed.
 
 ## Acknowledgements
 - [MMM-HK-Transport](https://github.com/winstonma/MMM-HK-Transport) by [winstonma](https://github.com/winstonma)
-- [MMM-SG-Transport (Depreciated)](https://github.com/xuanyou/MMM-SG-Transport) by [xuanyou](https://github.com/xuanyou)
+- [MMM-SG-Transport ](https://github.com/xuanyou/MMM-SG-Transport) by [xuanyou] (https://github.com/xuanyou) (Depreciated)
 
 
 ## License
