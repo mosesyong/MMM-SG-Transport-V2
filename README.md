@@ -12,6 +12,10 @@ This module works with [MagicMirror<sup>2</sup>](https://github.com/MichMich/Mag
 
 [MagicMirror<sup>2</sup> Forum](http://forum.magicmirror.builders/)
 
+## Screenshots
+
+![Screenshot](screenshots/screenshot.png)
+
 ## Prerequisite
 A working installation of [MagicMirror<sup>2</sup>](https://github.com/MichMich/MagicMirror)
  
