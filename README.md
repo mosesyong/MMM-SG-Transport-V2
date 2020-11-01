@@ -52,15 +52,13 @@ Sample configuration entry for your `~/MagicMirror/config/config.js`:
         }
     },
 
-BusStopCode - Bus stop number.
-
-name - Custom name to display that represents the bus stop in the UI.
-
-BusNumbers - Optional array of string containing bus numbers you wish to display. Invalid bus numbers will not be displayed.
+- BusStopCode - Bus stop number.
+- name - Custom name to display that represents the bus stop in the UI.
+- BusNumbers - Optional array of string containing bus numbers you wish to display. Invalid bus numbers will not be displayed.
 
 ## Acknowledgements
-[MMM-HK-Transport](https://github.com/winstonma/MMM-HK-Transport) by [winstonma](https://github.com/winstonma)
-[MMM-SG-Transport (Depreciated)](https://github.com/xuanyou/MMM-SG-Transport) by [xuanyou](https://github.com/xuanyou)
+- [MMM-HK-Transport](https://github.com/winstonma/MMM-HK-Transport) by [winstonma](https://github.com/winstonma)
+- [MMM-SG-Transport (Depreciated)](https://github.com/xuanyou/MMM-SG-Transport) by [xuanyou](https://github.com/xuanyou)
 
 
 ## License
