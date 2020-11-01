@@ -23,9 +23,9 @@ Module.register("MMM-SG-Transport-V2", {
                 BusStopCode: 43191,
                 name: "Opp St Mary's",
                 BusNumbers: [
-                    "157",
-                    "61",
-                    "852"
+                    157,
+                    61,
+                    852
                 ]
             },
             {
