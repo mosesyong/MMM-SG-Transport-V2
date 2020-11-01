@@ -18,19 +18,19 @@ Module.register("MMM-SG-Transport-V2", {
         // Intervals
         refresh_interval: 30 * 1000, // refresh display every 30 seconds
 
-        // TODO: Add specific bus number as a filter (optional)
         // Bus Stop IDs and Names to show
         bus_stops: [{
                 BusStopCode: 43191,
-                name: "Opp St Mary's"
+                name: "Opp St Mary's",
+                BusNumbers: [
+                    "157",
+                    "61",
+                    "852"
+                ]
             },
             {
                 BusStopCode: 43619,
                 name: "Opp Caltex"
-            },
-            {
-                BusStopCode: 75141,
-                name: "Blk 730"
             }
         ],
     },
@@ -44,7 +44,8 @@ Module.register("MMM-SG-Transport-V2", {
             var config_bus_stop = this.config.bus_stops[i];
             this.bus_stops[config_bus_stop.BusStopCode] = {
                 Name: config_bus_stop.name,
-                Services: null
+                Services: null,
+                BusNumbers: config_bus_stop.BusNumbers
             };
         }
 
@@ -132,7 +133,7 @@ Module.register("MMM-SG-Transport-V2", {
         for (var bus_stop_id in this.bus_stops) {
 
             var self = this;
-
+            let busNumbers = this.bus_stops[bus_stop_id].BusNumbers;
             table.appendChild(this.createBusStopLabelRow(this.bus_stops[bus_stop_id].Name));
 
             var services = this.bus_stops[bus_stop_id].Services;
@@ -141,7 +142,11 @@ Module.register("MMM-SG-Transport-V2", {
                 table.appendChild(this.createTextRow("Waiting for update..."));
             } else {
                 services.forEach(function(bus) {
-                    table.appendChild(self.createBusRow(bus));
+                    if (busNumbers == null || busNumbers.length == 0) {
+                        table.appendChild(self.createBusRow(bus));
+                    } else if (busNumbers.includes(bus.ServiceNo)) {
+                        table.appendChild(self.createBusRow(bus));
+                    }
                 });
             }
         }

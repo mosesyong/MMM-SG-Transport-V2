@@ -5,7 +5,7 @@ This module displays data about bus arrivals. More than one bus stop can be spec
 
 This module aims to provide the most compact display possible with multiple bus stops.
 
-Data is sourced from [LTA DataMall](https://www.mytransport.sg/content/mytransport/home/dataMall.html), you need to get your own API key here.
+Data is sourced from [LTA DataMall v2](https://www.mytransport.sg/content/mytransport/home/dataMall.html), you need to get your own API key here.
 
 This module works with [MagicMirror<sup>2</sup>](https://github.com/MichMich/MagicMirror) project by [MichMich](https://github.com/MichMich/)
 
@@ -37,7 +37,12 @@ Sample configuration entry for your `~/MagicMirror/config/config.js`:
             bus_stops: [
                 {
                     BusStopCode: 43191,
-                    name: "Opp St Mary's"
+                    name: "Opp St Mary's",
+                    BusNumbers: [
+                        "157",
+                        "61",
+                        "852"
+                    ]
                 },
                 {
                     BusStopCode: 43619,
@@ -46,6 +51,10 @@ Sample configuration entry for your `~/MagicMirror/config/config.js`:
             ]
         }
     },
+
+BusStopCode - Bus stop number.
+name - Custom name to display that represents the bus stop in the UI.
+BusNumbers - Optional array of string containing bus numbers you wish to display. Invalid bus numbers will not be displayed.
 
 ## Acknowledgements
 [MMM-HK-Transport](https://github.com/winstonma/MMM-HK-Transport) by [winstonma](https://github.com/winstonma)
