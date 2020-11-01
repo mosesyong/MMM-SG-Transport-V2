@@ -62,14 +62,18 @@ Sample configuration entry for your `~/MagicMirror/config/config.js`:
   <tbody>
     <tr>
       <td><code>lta_api_key</code></td>
-      <td><strong>REQUIRED</strong> API Key from LTA DataMall<br><br><strong>Type:</strong> <code>string</code></td>
+      <td><strong>REQUIRED</strong> API Key from LTA DataMall.<br><br><strong>Type:</strong> <code>string</code></td>
+      <tr>
+      <td><code>refresh_interval</code></td>
+      <td><strong>OPTIONAL</strong>  Optional integer value representing how often the data should be refreshed.<br><br><strong>Type:</strong> <code>integer</code></td>
+      </tr>
       </tr>
       <td><code>BusStopCode </code></td>
-      <td><strong>REQUIRED</strong> Bus stop number<br><br><strong>Type:</strong> <code>integer</code></td>
+      <td><strong>REQUIRED</strong> Bus stop number.<br><br><strong>Type:</strong> <code>integer</code></td>
       </tr>
       <tr>
       <td><code>name </code></td>
-      <td><strong>REQUIRED</strong> Custom bus stop name for display<br><br><strong>Type:</strong> <code>string</code></td>
+      <td><strong>REQUIRED</strong> Custom bus stop name for the display.<br><br><strong>Type:</strong> <code>string</code></td>
       </tr>
       <tr>
       <td><code>BusNumbers </code></td>
