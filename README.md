@@ -40,9 +40,9 @@ Sample configuration entry for your `~/MagicMirror/config/config.js`:
                     BusStopCode: 43191,
                     name: "Opp St Mary's",
                     BusNumbers: [
-                        "157",
-                        "61",
-                        "852"
+                        157,
+                        61,
+                        852
                     ]
                 },
                 {
