@@ -23,7 +23,7 @@ A working installation of [MagicMirror<sup>2</sup>](https://github.com/MichMich/
 2. Execute `git clone https://github.com/mosesyong/MMM-SG-Transport-V2`.
 3. Execute `cd MMM-SG-Transport-V2`.
 4. Execute `npm install`.
-5. Edit the `MMM-SG-Transport-V2.js`.
+5. Edit the `config.js`.
 
 ## Configuration
 Sample configuration entry for your `~/MagicMirror/config/config.js`:
@@ -33,7 +33,7 @@ Sample configuration entry for your `~/MagicMirror/config/config.js`:
         position: 'top_left',
         config: {
             lta_api_key: "...",
-            refresh_interval: 60 * 1000,
+            refresh_interval: 30 * 1000,
             bus_stops: [
                 {
                     BusStopCode: 43191,

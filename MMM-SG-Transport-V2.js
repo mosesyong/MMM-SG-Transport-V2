@@ -16,7 +16,7 @@ Module.register("MMM-SG-Transport-V2", {
         lta_api_bus_arrival_path: "BusArrivalv2",
 
         // Intervals
-        refresh_interval: 60 * 1000, // refresh display every minute
+        refresh_interval: 30 * 1000, // refresh display every 30 seconds
 
         // TODO: Add specific bus number as a filter (optional)
         // Bus Stop IDs and Names to show
