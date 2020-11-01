@@ -40,9 +40,9 @@ Sample configuration entry for your `~/MagicMirror/config/config.js`:
                     BusStopCode: 43191,
                     name: "Opp St Mary's",
                     BusNumbers: [
-                        157,
-                        61,
-                        852
+                        "157",
+                        "61",
+                        "852"
                     ]
                 },
                 {
@@ -77,8 +77,8 @@ Sample configuration entry for your `~/MagicMirror/config/config.js`:
       </tr>
       <tr>
       <td><code>BusNumbers </code></td>
-      <td><strong>OPTIONAL</strong>  Optional array of integers containing bus numbers you wish to display. Invalid bus numbers will be ignored.
-<br><br><strong>Type:</strong> <code>Array[integer]</code></td>
+      <td><strong>OPTIONAL</strong>  Optional array of string containing bus numbers you wish to display. Invalid bus numbers will be ignored. In string format as bus numbers can contain alphabets.
+<br><br><strong>Type:</strong> <code>Array[string]</code></td>
       </tr>
   </tbody>
 </table>
