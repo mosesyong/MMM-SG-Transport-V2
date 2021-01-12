@@ -51,7 +51,6 @@ Module.register("MMM-SG-Transport-V2", {
 
         // Share the config with the node_helper
         this.sendSocketNotification("CONFIG", this.config);
-
     },
 
     // Include styles:
@@ -88,7 +87,7 @@ Module.register("MMM-SG-Transport-V2", {
 
         // Don't display if no data
         if (ArrivalTimeArray.length == 0) {
-            return document.createElement("div");
+	    return document.createElement("div");
         }
 
         var row = document.createElement("tr");
@@ -110,7 +109,6 @@ Module.register("MMM-SG-Transport-V2", {
             element.innerHTML = arrivalTimeInMinutes;
             row.appendChild(element);
         });
-
 
         return row;
     },
@@ -141,13 +139,23 @@ Module.register("MMM-SG-Transport-V2", {
             if (services == null) {
                 table.appendChild(this.createTextRow("Waiting for update..."));
             } else {
+                var services_exist = false; // flag for services with no more arrivals
+                
                 services.forEach(function(bus) {
                     if (busNumbers == null || busNumbers.length == 0) {
                         table.appendChild(self.createBusRow(bus));
+                        services_exist = true;
                     } else if (busNumbers.includes(bus.ServiceNo)) {
                         table.appendChild(self.createBusRow(bus));
+                        services_exist = true;
                     }
                 });
+                
+                // If there are no more arrivals for bus services that we want,
+                // then the previous block should not have set services_exist to true
+                if (!services_exist) {
+                    table.appendChild(this.createTextRow("No more buses"));
+                }
             }
         }
         wrapper.appendChild(table);
