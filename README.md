@@ -109,7 +109,7 @@ Sample configuration entry for your `~/MagicMirror/config/config.js`:
 
 ## Acknowledgements
 - [MMM-HK-Transport](https://github.com/winstonma/MMM-HK-Transport) by [winstonma](https://github.com/winstonma)
-- [MMM-SG-Transport ](https://github.com/xuanyou/MMM-SG-Transport) by [xuanyou] (https://github.com/xuanyou) (Depreciated)
+- [MMM-SG-Transport ](https://github.com/xuanyou/MMM-SG-Transport) by [xuanyou](https://github.com/xuanyou) (Depreciated)
 
 
 ## License
