@@ -1,6 +1,6 @@
 {
   "name": "mmm-sg-transport-v2",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "MagicMirror module - Bus timings for Singapore",
   "main": "MMM-SG-Transport-V2.js",
   "scripts": {
