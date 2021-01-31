@@ -21,7 +21,9 @@ This module works with [MagicMirror<sup>2</sup>](https://github.com/MichMich/Mag
 The number of stickman refers to the crowd level on the bus.
 
 1 stickman - Seating available
+
 2 stickman - Standing available
+
 3 stickman - Limited standing
 
 
@@ -99,7 +101,9 @@ Sample configuration entry for your `~/MagicMirror/config/config.js`:
 ## Changelog
 
 1.0.0 - First version of MMM-SG-Transport-V2 with bus prediction functionality
+
 1.0.1 - Added change to display "No more buses" when no buses are expected to arrive
+
 1.0.2 - Added display icon to show crowd levels based on number of stickman
 
 
