@@ -16,6 +16,15 @@ This module works with [MagicMirror<sup>2</sup>](https://github.com/MichMich/Mag
 
 ![Screenshot](screenshots/screenshot.png)
 
+## Legend
+
+The number of stickman refers to the crowd level on the bus.
+
+1 stickman - Seating available
+2 stickman - Standing available
+3 stickman - Limited standing
+
+
 ## Prerequisite
 A working installation of [MagicMirror<sup>2</sup>](https://github.com/MichMich/MagicMirror)
  

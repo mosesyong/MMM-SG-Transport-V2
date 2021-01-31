@@ -73,21 +73,24 @@ Module.register("MMM-SG-Transport-V2", {
 
     createBusRow: function(bus) {
 
-        // Calculate arrival times
         ArrivalTimeArray = [];
+        CrowdingLevelArray = []
         if (bus.NextBus.EstimatedArrival !== "") {
             ArrivalTimeArray.push(bus.NextBus.EstimatedArrival);
+            CrowdingLevelArray.push(bus.NextBus.Load)
         }
         if (bus.NextBus2.EstimatedArrival !== "") {
             ArrivalTimeArray.push(bus.NextBus2.EstimatedArrival);
+            CrowdingLevelArray.push(bus.NextBus.Load)
         }
         if (bus.NextBus3.EstimatedArrival !== "") {
             ArrivalTimeArray.push(bus.NextBus3.EstimatedArrival);
+            CrowdingLevelArray.push(bus.NextBus.Load)
         }
 
         // Don't display if no data
         if (ArrivalTimeArray.length == 0) {
-	    return document.createElement("div");
+	        return document.createElement("div");
         }
 
         var row = document.createElement("tr");
@@ -95,7 +98,10 @@ Module.register("MMM-SG-Transport-V2", {
         element.innerHTML = bus.ServiceNo + ":&nbsp;"
         row.appendChild(element);
 
-        ArrivalTimeArray.forEach(function(ArrivalTime) {
+        for (var i = 0; i < ArrivalTimeArray.length; i++) {
+            var ArrivalTime = ArrivalTimeArray[i];
+            var CrowdingLevel = CrowdingLevelArray[i];
+
             var time = new Date(ArrivalTime);
             var now = new Date();
             var arrivalTimeInMinutes = Math.floor((time - now) / (60 * 1000));
@@ -106,9 +112,34 @@ Module.register("MMM-SG-Transport-V2", {
             }
 
             var element = document.createElement("td");
-            element.innerHTML = arrivalTimeInMinutes;
+            element.innerHTML = arrivalTimeInMinutes + ":&nbsp;";
+            
+            // Location of stickman image
+            var pathToImage = "modules/MMM-SG-Transport-V2/images/stickman.png";
+            // Height of image
+            var height = 17;
+
+            var image = "<img src='" + pathToImage + "' height='" + height + "'>"
+        
+            // Seating available
+            if (CrowdingLevel == "SEA") {
+                // print once
+                element.innerHTML += image;
+                
+            // Standing available
+            } else if (CrowdingLevel == "SDA") {
+                element.innerHTML += image;
+                element.innerHTML += image;
+
+            // Limited standing
+            } else if (CrowdingLevel == "LSD") {
+                element.innerHTML += image;
+                element.innerHTML += image;
+                element.innerHTML += image;
+            }
+                        
             row.appendChild(element);
-        });
+        };
 
         return row;
     },
