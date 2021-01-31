@@ -96,6 +96,12 @@ Sample configuration entry for your `~/MagicMirror/config/config.js`:
   </tbody>
 </table>
 
+## Changelog
+
+1.0.0 - First version of MMM-SG-Transport-V2 with bus prediction functionality
+1.0.1 - Added change to display "No more buses" when no buses are expected to arrive
+1.0.2 - Added display icon to show crowd levels based on number of stickman
+
 
 ## Acknowledgements
 - [MMM-HK-Transport](https://github.com/winstonma/MMM-HK-Transport) by [winstonma](https://github.com/winstonma)
